@@ -1,0 +1,13 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config ZMQ_HELLO
+	tristate "\"Hello ZMQ!\" example"
+	default n
+	---help---
+		Enable the \"Hello ZMQ!\" example
+
+if ZMQ_HELLO
+endif
