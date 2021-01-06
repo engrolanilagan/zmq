@@ -34,12 +34,12 @@
 #
 ############################################################################
 
-ifeq ($(CONFIG_ZMQ_HELLO), y)
-CONFIGURED_APPS += zmq/hello
-endif
 ifeq ($(CONFIG_ZMQ_HWSERVER), y)
 CONFIGURED_APPS += zmq/hwserver
 endif
 ifeq ($(CONFIG_ZMQ_HWCLIENT), y)
 CONFIGURED_APPS += zmq/hwclient
+endif
+ifeq ($(CONFIG_ZMQ_LIBZMQ), y)
+CONFIGURED_APPS += zmq/libzmq
 endif

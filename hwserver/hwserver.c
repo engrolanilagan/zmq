@@ -1,5 +1,5 @@
 //  Hello World server
-#include "zmq.h"
+#include "../libzmq/zmq.h"
 //#include <zmq.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -18,12 +18,12 @@ int main()
     assert (rc == 0);
 
     //for(int i=0; i<5; i++){
-        unsigned char buffer [51] = {0};
+        unsigned char buffer [50] = {0};
 	//printf("hwserver.c : NuttX waiting to recv message!\n");
-        zmq_recv (responder, buffer, 51, 0);
+        zmq_recv (responder, buffer, 50, 0);
 	printf ("hwserver.c : NuttX received command: \n");
-        for(int i=0; i<51; i++){
-	    printf("%X\n", buffer[i]);
+        for(int i=0; i<50; i++){
+	    printf("%02hhX ", buffer[i]);
 	}
         printf ("\n");
         //sleep (1);         //  Do some 'work'

@@ -22,13 +22,16 @@ include $(APPDIR)/Make.defs
 
 # Hello, World! built-in application info
 
-PROGNAME  = zmqhello
+PROGNAME  = libzmq
 PRIORITY  = $(CONFIG_EXAMPLES_HELLO_PRIORITY)
 STACKSIZE = $(CONFIG_EXAMPLES_HELLO_STACKSIZE)
-MODULE    = $(CONFIG_ZMQ_HELLO)
+MODULE    = $(CONFIG_ZMQ_HWSERVER)
 
-# Hello, World! Example
-
-MAINSRC = hello_zmq.c
+# CPP Files
+CXXEXT  = .cpp
+CSRCS = sha1.c
+CXXSRCS = $(filter-out $(MAINSRC), $(wildcard *.cpp))
+# PUBLISH Example
+MAINSRC = libzmq.c
 
 include $(APPDIR)/Application.mk

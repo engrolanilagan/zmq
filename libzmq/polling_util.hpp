@@ -37,7 +37,7 @@
 #include "stdint.hpp"
 #include "platform.hpp"
 #include "err.hpp"
-#include "/home/ubuntu/sandbox/zmq_nuttx/incubator-nuttx/include/sys/select.h"
+#include "sys/select.h"
 namespace zmq
 {
 template <typename T, size_t S> class fast_vector_t

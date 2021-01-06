@@ -3,11 +3,11 @@
 # see the file kconfig-language.txt in the NuttX tools repository.
 #
 
-config ZMQ_HELLO
-	tristate "\"Hello ZMQ!\" example"
+config ZMQ_LIBZMQ
+	tristate "\"ZeroMQ Library\""
 	default n
 	---help---
-		Enable the \"Hello ZMQ!\" example
+		Enable ZeroMQ Low Level Library
 
-if ZMQ_HELLO
+if ZMQ_LIBZMQ
 endif
